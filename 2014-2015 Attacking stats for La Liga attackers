@@ -1,0 +1,77 @@
+forwards: list[str] = ["Ronaldo", "Neymar", "Suarez", "Bale", "Messi", "Benzema"]
+requested_player = input("Enter your favorite forward from MSN or BBC: ")
+requested_stat = input("Which stat do you want to know? ")
+# dictionary of statistics from 2014/15 season
+
+    goals = {
+        forwards[0]: 61,
+        forwards[1]: 39,
+        forwards[2]: 25,
+        forwards[3]: 17,
+        forwards[4]: 58,
+        forwards[5]: 22
+    }
+assists = {
+
+    forwards[0]: 23,
+    forwards[1]: 10,
+    forwards[2]: 23,
+    forwards[3]: 12,
+    forwards[4]: 31,
+    forwards[5]: 15
+}
+ronaldo_goals = goals[forwards[0]]
+neymar_goals = goals[forwards[1]]
+suarez_goals = goals[forwards[2]]
+bale_goals = goals[forwards[3]]
+messi_goals = goals[forwards[4]]
+benzema_goals = goals[forwards[5]]
+
+ronaldo_assists = assists[forwards[0]]
+neymar_assists = assists[forwards[1]]
+suarez_assists = assists[forwards[2]]
+bale_assists = assists[forwards[3]]
+messi_assists = assists[forwards[4]]
+benzema_assists = assists[forwards[5]]
+
+if requested_stat == "Goals":
+    if requested_player == forwards[0]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(ronaldo_goals) +
+              " goals in all competitions.")
+    if requested_player == forwards[1]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(bale_goals) +
+              " goals in all competitions.")
+    if requested_player == forwards[2]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(messi_goals) +
+              " goals in all competitions.")
+    if requested_player == forwards[3]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(suarez_goals) +
+              " goals in all competitions.")
+    if requested_player == forwards[4]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(benzema_goals) +
+              " goals in all competitions.")
+    if requested_player == forwards[5]:
+        print("In the 2014/15 season, " + str(requested_player) + " scored " + str(neymar_goals) +
+              " goals in all competitions.")
+
+if requested_stat == "Assists":
+    if requested_player == forwards[0]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(neymar_assists) +
+              " goals in all competitions.")
+    if requested_player == forwards[1]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(ronaldo_assists) +
+              " goals in all competitions.")
+    if requested_player == forwards[2]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(bale_assists) +
+              " goals in all competitions.")
+    if requested_player == forwards[3]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(messi_assists) +
+              " goals in all competitions.")
+    if requested_player == forwards[4]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(benzema_assists) +
+              " goals in all competitions.")
+    if requested_player == forwards[5]:
+        print("In the 2014/15 season, " + str(requested_player) + " assisted " + str(suarez_assists) +
+              " goals in all competitions.")
+else:
+    print("Please enter an applicable attacker")
